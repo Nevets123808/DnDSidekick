@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block body_content %}
+<h1> Characters </h1>
+
+<table>
+    <th>
+        <td>Charcter Name</td>
+    </th>
+    {% if (chars|length)>0 %}
+        {% for char in chars %}
+        <tr>
+            <td>{{char.charname}}</td>
+        </tr>
+        {% endfor %}
+    {% endif %}
+</table>
+
+{% endblock body_content %}

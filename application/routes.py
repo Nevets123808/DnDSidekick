@@ -9,8 +9,10 @@ def home():
 
 @app.route('/characters')
 def char_list():
-    chars = db.session.execute(db.select(Character).order_by(Character.charname)).scalars()
-    return chars
+    chars = Character.query.all()
+    return render_template('charlist.html', chars = chars)
+
+
 @app.route('/create', methods=["POST"])
 def char_create():
     char = Character(
