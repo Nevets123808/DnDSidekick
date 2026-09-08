@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% block body_content %}
+<h1> New Character </h1>
+    <form method = Post style="white-space: pre-line">
+        {{form.hidden_tag()}} 
+        {{form.name.label}} {{form.name}} 
+        {{form.profbonus.label}} {{form.profbonus}}
+        {{form.armorclass.label}} {{form.armorclass}} 
+        {{form.hitpoints.label}} {{form.hitpoints}} 
+        {{form.hitdice.label}} {{form.hitdice}}
+        {{form.str.label}}  {{form.str}} 
+        {{form.dex.label}}  {{form.dex}} 
+        {{form.con.label}}  {{form.con}} 
+        {{form.int.label}}  {{form.int}} 
+        {{form.wis.label}}  {{form.wis}} 
+        {{form.cha.label}}  {{form.cha}} 
+        {{form.submit.label}}  {{form.submit}} 
+    </form>
+{% endblock body_content %}

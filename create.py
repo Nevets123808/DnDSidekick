@@ -27,8 +27,47 @@ with app.app_context():
         "Stealth",
         "Survival"
     ]
+    skills = [Skill(skillname = skillname) for skillname in skillnames]
+    db.session.add_all(skills)
+    db.session.commit()
+
+    #Create senses
+    sensenames = [
+        "darkvision",
+        "tremorsense",
+        "blindsight"
+    ]
+    senses = [Sense(sensename = sensename) for sensename in sensenames]
+
+    db.session.add_all(senses)
+    db.session.commit()
+
+    #Create Languages
+    languagenames = [
+        "common",
+        "dwarvish",
+        "elvish",
+        "gnomish",
+        "giant"
+    ]
+
+    languages = [Language(languagename = languagename) for languagename in languagenames]
+
+    db.session.add_all(languages)
+    db.session.commit()
+
     char = Character(
-        charname = "Elathon"
+        charname = "Elathon",
+        profbonus= 2,
+        armorclass = 10,
+        hitpoints = 10,
+        hitdice = "1d6",
+        str = 10,
+        dex = 10,
+        con = 10,
+        int = 10,
+        wis = 10,
+        cha = 10,
     )
     db.session.add(char)
     db.session.commit()

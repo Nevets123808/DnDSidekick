@@ -5,11 +5,32 @@
 <table>
     <th>
         <td>Charcter Name</td>
+    <td>Prof. bonus</td>
+    <td>Armor Class</td>
+    <td>Hit Points</td>
+    <td>Hit Dice</td>
+    <td>Str</td>
+    <td>Dex</td>
+    <td>Con</td>
+    <td>Int</td>
+    <td>Wis</td>
+    <td>Cha</td>
     </th>
     {% if (chars|length)>0 %}
         {% for char in chars %}
         <tr>
-            <td>{{char.charname}}</td>
+            <td>{{char.char_id}}</td>
+            <td><a href="{{url_for('char_update', char_id = char.char_id)}}">{{char.charname}}</a></td>
+            <td>{{char.profbonus}}</td>
+            <td>{{char.armorclass}}</td>
+            <td>{{char.hitpoints}}</td>
+            <td>{{char.hitdice}}</td>
+            <td>{{char.str}}</td>
+            <td>{{char.dex}}</td>
+            <td>{{char.con}}</td>
+            <td>{{char.int}}</td>
+            <td>{{char.wis}}</td>
+            <td>{{char.cha}}</td>
         </tr>
         {% endfor %}
     {% endif %}
