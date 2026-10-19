@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block body_content %}
+<h1> Actions </h1>
+
+<table>
+    <th>
+    <td>Action Name</td>
+    </th>
+    {% if (actions|length)>0 %}
+        {% for action in actions %}
+        <tr>
+            <td>{{action.action_id}}</td>
+            <td><a href="{{url_for('action_update', action_id = action.action_id)}}">{{action.actionname}}</a></td>
+        </tr>
+        {% endfor %}
+    {% endif %}
+</table>
+
+<a href="{{url_for('action_create')}}">New Action </a>
+
+{% endblock body_content %}

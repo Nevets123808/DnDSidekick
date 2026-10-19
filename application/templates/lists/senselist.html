@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block body_content %}
+<h1> Senses </h1>
+
+<table>
+    <th>
+    <td>Sense Name</td>
+    </th>
+    {% if (senses|length)>0 %}
+        {% for sense in senses %}
+        <tr>
+            <td>{{sense.sense_id}}</td>
+            <td><a href="{{url_for('sense_update', sense_id = sense.sense_id)}}">{{sense.sensename}}</a></td>
+        </tr>
+        {% endfor %}
+    {% endif %}
+</table>
+
+<a href="{{url_for('sense_create')}}">New Sense </a>
+
+{% endblock body_content %}

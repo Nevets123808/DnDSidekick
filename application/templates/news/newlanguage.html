@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+{% block body_content %}
+<h1> {{mode}} Language </h1>
+    <form method = Post style="white-space: pre-line">
+        {{form.hidden_tag()}} 
+        {{form.name.label}} {{form.name}} 
+        {{form.submit.label}}  {{form.submit}} 
+    </form>
+{% endblock body_content %}

@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block body_content %}
+<h1> Spells </h1>
+
+<table>
+    <th>
+    <td>Spell Name</td>
+    </th>
+    {% if (spells|length)>0 %}
+        {% for spell in spells %}
+        <tr>
+            <td>{{spell.spell_id}}</td>
+            <td><a href="{{url_for('spell_update', spell_id = spell.spell_id)}}">{{spell.spellname}}</a></td>
+        </tr>
+        {% endfor %}
+    {% endif %}
+</table>
+
+<a href="{{url_for('spell_create')}}">New Spell </a>
+
+{% endblock body_content %}

@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block body_content %}
+<h1> Languages </h1>
+
+<table>
+    <th>
+    <td>Language Name</td>
+    </th>
+    {% if (languages|length)>0 %}
+        {% for language in languages %}
+        <tr>
+            <td>{{language.language_id}}</td>
+            <td><a href="{{url_for('language_update', language_id = language.language_id)}}">{{language.languagename}}</a></td>
+        </tr>
+        {% endfor %}
+    {% endif %}
+</table>
+
+<a href="{{url_for('language_create')}}">New Language </a>
+
+{% endblock body_content %}

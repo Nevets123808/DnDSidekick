@@ -5,6 +5,14 @@
     </style>
 </head>
 <body>
+    <div>
+        <a href="{{url_for('char_list')}}">Characters </a>
+        <a href="{{url_for('action_list')}}"> Actions </a>
+        <a href="{{url_for('feature_list')}}"> Features </a>
+        <a href="{{url_for('spell_list')}}"> Spells </a>
+        <a href="{{url_for('sense_list')}}"> Senses </a>
+        <a href="{{url_for('language_list')}}"> Languages </a>
+</div>
     {% block body_content %}
     {% endblock body_content %}
     <br>

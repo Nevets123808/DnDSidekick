@@ -1,0 +1,5 @@
+Add skill proficency to forms
+    - List with radio buttons
+
+Add features, actions and spells
+    -List with lookup or create new

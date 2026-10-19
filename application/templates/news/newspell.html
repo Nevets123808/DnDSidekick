@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block body_content %}
+<h1> {{mode}} Spell </h1>
+    <form method = Post style="white-space: pre-line">
+        {{form.hidden_tag()}} 
+        {{form.name.label}} {{form.name}} 
+        {{form.name.spelllevel}} {{form.spelllevel}}
+        {{form.name.school}} {{form.school}}
+        {{form.name.description}} {{form.description}}
+        {{form.submit.label}}  {{form.submit}} 
+    </form>
+{% endblock body_content %}

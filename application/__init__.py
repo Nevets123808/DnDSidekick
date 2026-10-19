@@ -12,5 +12,5 @@ class Base(DeclarativeBase):
     pass
 
 db = SQLAlchemy(app)
-
+ 
 from application.routes import *

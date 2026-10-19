@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 {% block body_content %}
-<h1> New Character </h1>
+<h1> {{mode}} Character </h1>
     <form method = Post style="white-space: pre-line">
         {{form.hidden_tag()}} 
         {{form.name.label}} {{form.name}} 
@@ -13,7 +13,8 @@
         {{form.con.label}}  {{form.con}} 
         {{form.int.label}}  {{form.int}} 
         {{form.wis.label}}  {{form.wis}} 
-        {{form.cha.label}}  {{form.cha}} 
+        {{form.cha.label}}  {{form.cha}}
+        {{form.skillprofs}}
         {{form.submit.label}}  {{form.submit}} 
     </form>
 {% endblock body_content %}
